@@ -1,5 +1,5 @@
 
-# 1. description :
+# 1. Description :
 
  bloginfo("description");
 
