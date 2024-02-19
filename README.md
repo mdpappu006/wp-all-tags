@@ -1,6 +1,7 @@
 # wp-all-tags
 
-1. description :
+
+# 1. description :
 =================
 
 bloginfo("description");
