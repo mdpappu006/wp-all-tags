@@ -4,7 +4,7 @@
 bloginfo("description");
 
 
-#2. Title 
+# 2. Title 
 
 bloginfo("title");
 
@@ -27,24 +27,20 @@ function alpha_assets(){
 add_action("wp_enqueue_scripts", "alpha_assets");
 
 
-4. Post Tags list
-===================
+# 4. Post Tags list
 
 get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
 
 
-5. Post Pagination
-==================
+# 5. Post Pagination
 
 the_posts_pagination( array( 'screen_reader_text' => '', ));
 
 
-6. Post excerpt
-================
+# 6. Post excerpt
 
 the_excerpt();
 
-7. Post Permalink
-==================
+# 7. Post Permalink
 
 the_permalink();
