@@ -1,17 +1,15 @@
 
 # 1. description :
 
-<?php bloginfo("description"); ?>
+ bloginfo("description");
 
 
 # 2. Title 
 
-<?php bloginfo("title"); ?>
+ bloginfo("title");
 
 
 # 3. add_theme_support
-
-<?php
 
     function bootstrapping(){
         load_theme_textdomain("alpha");
@@ -27,14 +25,12 @@
     }
     
     add_action("wp_enqueue_scripts", "alpha_assets");
-?>
+    
 
 # 4. Post Tags list
-<?php
 
 get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
 
-?>
 
 # 5. Post Pagination
 
@@ -43,8 +39,8 @@ the_posts_pagination( array( 'screen_reader_text' => '', ));
 
 # 6. Post excerpt
 
-<?php the_excerpt(); ?>
+ the_excerpt();
 
 # 7. Post Permalink
 
-<?php the_permalink(); ?>
+the_permalink(); 
