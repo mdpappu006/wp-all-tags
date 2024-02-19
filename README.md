@@ -1,20 +1,15 @@
-# wp-all-tags
-
 
 # 1. description :
-=================
 
 bloginfo("description");
 
 
-2. Title 
-============
+#2. Title 
 
 bloginfo("title");
 
 
-3. add_theme_support
-=====================
+# 3. add_theme_support
 
 function bootstrapping(){
     load_theme_textdomain("alpha");
