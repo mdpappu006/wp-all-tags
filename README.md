@@ -83,7 +83,7 @@ get_template_part("hero");();
 
 ```
 
-# 10. Home Site URL
+# 10. Home Page URL
 
 ```php
 
@@ -91,7 +91,7 @@ echo site_url();
 
 ```
 
-# 11. Home Site URL
+# 11. Previous & Next Post URL
 
 ```php
 
