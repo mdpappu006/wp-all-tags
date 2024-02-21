@@ -1,11 +1,13 @@
 
 # 1. description :
 
+```php
  bloginfo("description");
 
 
 # 2. Title 
 
+```php
  bloginfo("title");
 
 
@@ -29,6 +31,7 @@
 
 # 4. Post Tags list
 
+```php
 get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
 
 
@@ -66,9 +69,9 @@ previous_post_link();
 
 
 # 12. Register Sidebar 
-...
 
 ```php
+
     function alpha_sidebar(){
         register_sidebar(
             array(
@@ -89,4 +92,3 @@ previous_post_link();
 if(is_active_sidebar("sidebar-1")){
     dynamic_sidebar("sidebar-1");
 }
-...
