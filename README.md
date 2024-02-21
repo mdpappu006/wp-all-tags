@@ -2,16 +2,22 @@
 # 1. description :
 
 ```php
- bloginfo("description");
+
+bloginfo("description");
+
 ```
 
 # 2. Title 
 
 ```php
- bloginfo("title");
+
+bloginfo("title");
+
 ```
 
 # 3. add_theme_support
+
+```php
 
     function bootstrapping(){
         load_theme_textdomain("alpha");
@@ -32,41 +38,67 @@
 # 4. Post Tags list
 
 ```php
+
 get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
+
 ```
 
 # 5. Post Pagination
 
+```php
+
 the_posts_pagination( array( 'screen_reader_text' => '', ));
 
+```
 
 # 6. Post excerpt
 
- the_excerpt();
+```php
+
+the_excerpt();
+
+```
 
 # 7. Post Permalink
 
+```php
+
 the_permalink(); 
+
+```
 
 # 8. Post Comments
 
+```php
+
 comments_template();
 
+```
 
 # 9. Get template Part
 
+```php
+
 get_template_part("hero");();
 
+```
 
 # 10. Home Site URL
 
+```php
+
 echo site_url();
 
+```
+
 # 11. Home Site URL
+
+```php
 
 next_post_link();
 previous_post_link();
 
+```
 
 # 12. Register Sidebar 
 
@@ -88,7 +120,12 @@ previous_post_link();
 
     add_action("widgets_init", "alpha_sidebar");
 
+```
+
 // active this hooks
+```php
 if(is_active_sidebar("sidebar-1")){
     dynamic_sidebar("sidebar-1");
 }
+
+```
