@@ -1,5 +1,5 @@
 
-# 1. Description :
+# 1. description :
 
  bloginfo("description");
 
@@ -44,3 +44,40 @@ the_posts_pagination( array( 'screen_reader_text' => '', ));
 # 7. Post Permalink
 
 the_permalink(); 
+
+# 8. Post Comments
+
+comments_template();
+
+
+# 9. Get template Part
+
+get_template_part("hero");();
+
+
+# 10. Home Site URL
+
+echo site_url();
+
+# 11. Home Site URL
+
+next_post_link();
+previous_post_link();
+
+
+# 12. Register Sidebar 
+
+function alpha_sidebar(){
+    register_sidebar(array(
+        'name' => __( 'Right Sidebar', 'alpha'),
+        'id' => '',
+        'description' => __('', 'alpha'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+}
+
+add_action("widget_init", "alpha_sidebar");
+
