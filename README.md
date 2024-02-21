@@ -3,13 +3,13 @@
 
 ```php
  bloginfo("description");
-
+```
 
 # 2. Title 
 
 ```php
  bloginfo("title");
-
+```
 
 # 3. add_theme_support
 
@@ -27,13 +27,13 @@
     }
     
     add_action("wp_enqueue_scripts", "alpha_assets");
-    
+```   
 
 # 4. Post Tags list
 
 ```php
 get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
-
+```
 
 # 5. Post Pagination
 
