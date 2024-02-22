@@ -1,5 +1,5 @@
 
-# 1. description :
+# 1. Description :
 
 ```php
 
@@ -90,7 +90,7 @@ get_template_part("hero");();
 
 ```
 
-# 10. Home Site URL
+# 10. Home Page URL
 
 ```php
 
@@ -98,7 +98,7 @@ echo site_url();
 
 ```
 
-# 11. Home Site URL
+# 11. Previous & Next Post URL
 
 ```php
 
@@ -179,3 +179,5 @@ if(is_active_sidebar("sidebar-1")){
     $thumbnails_url = get_the_post_thumbnail_url(null, 'large');
 
 ```
+
+
