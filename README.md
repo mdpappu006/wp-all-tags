@@ -30,6 +30,13 @@ bloginfo("title");
     function alpha_assets(){
         wp_enqueue_style("alpha", get_stylesheet_uri());
         wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+
+
+
+        
+        // Js Script adding
+
+        wp_enqueue_script("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array('jquery'),'0.0.1', true);
     }
     
     add_action("wp_enqueue_scripts", "alpha_assets");
@@ -83,7 +90,7 @@ get_template_part("hero");();
 
 ```
 
-# 10. Home Page URL
+# 10. Home Site URL
 
 ```php
 
@@ -91,7 +98,7 @@ echo site_url();
 
 ```
 
-# 11. Previous & Next Post URL
+# 11. Home Site URL
 
 ```php
 
@@ -127,5 +134,48 @@ previous_post_link();
 if(is_active_sidebar("sidebar-1")){
     dynamic_sidebar("sidebar-1");
 }
+
+```
+
+
+# 13. Register Nav Menu 
+
+```php
+
+    // add this code functions.php files
+
+    register_nav_menu("topmenu", __("Top Menu", "alpha"));    
+
+    // displaying the menu where you want! 
+    wp_nav_menu(
+        array(
+            'theme_location' => '',
+            'menu_id' => '',
+            'menu_class' => 'list-line text-center',
+        )
+    );
+
+```
+
+# 14. Add filter for Menu, Css class 
+
+```php
+
+    
+    function alpha_menu_item_class($classes, $item){
+        $classes[] = "list-inline-item";
+        return $classes;
+    }
+
+    add_filter("nav_menu_css_class", "alpha_menu_item_class",10,2);
+
+```
+
+
+# 15. show the post thumbnail in href
+
+```php
+
+    $thumbnails_url = get_the_post_thumbnail_url(null, 'large');
 
 ```
