@@ -33,10 +33,13 @@ bloginfo("title");
 
 
 
-        
-        // Js Script adding
+        // Extarnal Jquery file load library
 
         wp_enqueue_script("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array('jquery'),'0.0.1', true);
+
+        // internal Jquery file load
+        wp_enqueue_script("main-js", get_template_directory_uri()."/assets/js/main.js", array('jquery'),'0.0.1', true);
+
     }
     
     add_action("wp_enqueue_scripts", "alpha_assets");
@@ -86,7 +89,7 @@ comments_template();
 
 ```php
 
-get_template_part("hero");();
+get_template_part("hero");
 
 ```
 
@@ -172,7 +175,7 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
-# 15. show the post thumbnail in href
+# 15. Show the post thumbnail in href
 
 ```php
 
@@ -181,3 +184,21 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
+
+# 16. cache busting Solution -> use time() function
+
+```php
+
+    wp_enqueue_style("alpha", get_stylesheet_uri(), null, time());
+
+
+    // Live server caches Solution
+
+    if(site_url() == "https://example.com"){
+        define("VERSION", time());
+    }else{
+        define("VERSION", wp_get_theme()->get("Version"));
+    }
+
+
+```
