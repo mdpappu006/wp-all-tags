@@ -202,3 +202,32 @@ if(is_active_sidebar("sidebar-1")){
 
 
 ```
+
+
+
+
+
+# 17. Remove the inline css function hook
+
+```php
+
+
+    function alpha_about_banner(){
+        if(is_page()):
+        $feat_image = get_the_post_thumbnail_url(null, "large");
+    ?>
+    <style>
+        .page-header{
+            background-image: url(<?php echo $feat_image;?>);
+        }
+    </style>
+    <?php
+        endif;
+    }
+
+    add_action("wp_head","alpha_about_banner",11);
+
+
+```
+
+
