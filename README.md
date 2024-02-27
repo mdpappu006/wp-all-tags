@@ -205,8 +205,6 @@ if(is_active_sidebar("sidebar-1")){
 
 
 
-
-
 # 17. Remove the inline css function hook
 
 ```php
@@ -230,4 +228,80 @@ if(is_active_sidebar("sidebar-1")){
 
 ```
 
+
+# 18. Custom header Support
+
+```php
+
+
+    function bootstrapping(){
+        
+        add_theme_support( 'custom-header' );
+    }
+    add_action("after_setup_theme", "bootstrapping");
+    
+
+    if(is_front_page()):
+        if(current_theme_supports("custom-header")):
+    ?>
+    <style>
+        .header{
+            background-image: url(<?php echo header_image();?>);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 50px;
+        }
+
+        .header h1.heading a, h3.tagline{
+            color: #<?php echo get_header_textcolor();?>;
+
+            <?php 
+                if(!display_header_text()){
+                    echo "display:none;";
+                }
+            ?>
+
+        }
+    </style>
+
+    <?php
+        endif;
+    endif;
+    }
+
+
+
+
+```
+
+
+
+
+# 19. Custom Logo Support
+
+```php
+
+
+    function bootstrapping(){
+
+        $alpha_logo = array(
+            'width'   => 100,
+            'height' => 100,
+        );
+        add_theme_support( 'custom-logo' ,$alpha_logo);
+
+    }
+    add_action("after_setup_theme", "bootstrapping");
+    
+
+    // where you want to show you logo
+
+    <?php if(current_theme_supports("custom-logo")):?>
+        <div class="header-logo text-center">
+            <?php the_custom_logo();?>
+        </div>
+    <?php endif;?>
+
+
+```
 
