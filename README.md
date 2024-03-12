@@ -53,7 +53,20 @@ get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
 
 ```
 
-# 5. Post Pagination
+# 5. Loop Post Query
+
+```php
+
+    <?php if(have_posts()):
+        the_post();
+    ?>
+        // Here your Content
+    <?php 
+        endif;
+    ?>
+```
+
+# 6. Post Pagination
 
 ```php
 
@@ -61,7 +74,7 @@ the_posts_pagination( array( 'screen_reader_text' => '', ));
 
 ```
 
-# 6. Post excerpt
+# 7. Post excerpt
 
 ```php
 
@@ -69,7 +82,7 @@ the_excerpt();
 
 ```
 
-# 7. Post Permalink
+# 8. Post Permalink
 
 ```php
 
@@ -77,7 +90,7 @@ the_permalink();
 
 ```
 
-# 8. Post Comments
+# 9. Post Comments
 
 ```php
 
@@ -85,7 +98,7 @@ comments_template();
 
 ```
 
-# 9. Get template Part
+# 10. Get template Part
 
 ```php
 
@@ -93,7 +106,7 @@ get_template_part("hero");
 
 ```
 
-# 10. Home Page URL
+# 11. Home Page URL
 
 ```php
 
@@ -101,7 +114,7 @@ echo site_url();
 
 ```
 
-# 11. Previous & Next Post URL
+# 12. Previous & Next Post URL
 
 ```php
 
@@ -110,7 +123,7 @@ previous_post_link();
 
 ```
 
-# 12. Register Sidebar 
+# 13. Register Sidebar 
 
 ```php
 
@@ -141,7 +154,7 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
-# 13. Register Nav Menu 
+# 14. Register Nav Menu 
 
 ```php
 
@@ -160,7 +173,7 @@ if(is_active_sidebar("sidebar-1")){
 
 ```
 
-# 14. Add filter for Menu, Css class 
+# 15. Add filter for Menu, Css class 
 
 ```php
 
@@ -175,7 +188,7 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
-# 15. Show the post thumbnail in href
+# 16. Show the post thumbnail in href
 
 ```php
 
@@ -185,7 +198,7 @@ if(is_active_sidebar("sidebar-1")){
 
 
 
-# 16. cache busting Solution -> use time() function
+# 17. cache busting Solution -> use time() function
 
 ```php
 
@@ -205,7 +218,7 @@ if(is_active_sidebar("sidebar-1")){
 
 
 
-# 17. Remove the inline css function hook
+# 18. Remove the inline css function hook
 
 ```php
 
@@ -229,7 +242,7 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
-# 18. Custom header Support
+# 19. Custom header Support
 
 ```php
 
@@ -277,7 +290,7 @@ if(is_active_sidebar("sidebar-1")){
 
 
 
-# 19. Custom Logo Support
+# 20. Custom Logo Support
 
 ```php
 
