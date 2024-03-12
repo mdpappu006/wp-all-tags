@@ -57,12 +57,12 @@ get_the_tag_list("<ul class='list-unstyled'><li>", "</li><li>", "</li></ul>");
 
 ```php
 
-    <?php if(have_posts()):
+    <?php while(have_posts()):
         the_post();
     ?>
         // Here your Content
     <?php 
-        endif;
+        endwhile;
     ?>
 ```
 
