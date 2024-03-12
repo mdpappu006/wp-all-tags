@@ -318,3 +318,15 @@ if(is_active_sidebar("sidebar-1")){
 
 ```
 
+
+# 21. If Post thumbnail exist
+
+```php
+ <?php 
+    if(has_post_thumbnail()){
+        the_post_thumbnail('large', array('class'=> 'img-fluid'));
+    }
+?>
+
+```
+
