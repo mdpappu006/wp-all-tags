@@ -330,3 +330,17 @@ if(is_active_sidebar("sidebar-1")){
 
 ```
 
+# 22. the Post Single Views otherwise show excerpt.
+
+```php
+
+<?php 
+    if(is_single()){
+        the_content();
+    }else{
+        the_excerpt();
+    }
+?>
+
+```
+
