@@ -344,3 +344,17 @@ if(is_active_sidebar("sidebar-1")){
 
 ```
 
+# 23. If the comments doesn't open 
+
+```php
+
+<?php if(comments_open()):?>
+    <div class="comments">
+        <?php comments_template();?>
+    </div>
+<?php endif;?>
+
+
+```
+
+
