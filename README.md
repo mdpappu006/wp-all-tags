@@ -358,3 +358,50 @@ if(is_active_sidebar("sidebar-1")){
 ```
 
 
+# 24. Custom Header Text Color 
+
+```php
+
+// Function Hook
+function alpha_bootstraping(){  
+    add_theme_support('custom-header');
+
+    $alpha_custom_header= array(
+        'header-text' => true,
+        'default-text-color' => '#222',
+    );
+
+    add_theme_support('custom-header', $alpha_custom_header);
+
+}
+
+add_action("after_setup_theme", "alpha_bootstraping");
+
+<?php
+    endif;
+
+    if(is_front_page()):
+        if(current_theme_supports("custom-header")):
+
+?>
+
+<style>
+    .header h1.heading a, h3.tagline{
+        color: #<?php echo get_header_textcolor();?>;
+
+        <?php if(!display_header_text()){
+            echo "display:none;";
+        }
+        ?>
+    }
+</style>
+
+<?php 
+        endif;
+    endif;
+}
+
+
+```
+
+
