@@ -370,13 +370,15 @@ function alpha_bootstraping(){
         'header-text' => true,
         'default-text-color' => '#222',
     );
-
     add_theme_support('custom-header', $alpha_custom_header);
-
 }
 
 add_action("after_setup_theme", "alpha_bootstraping");
 
+
+
+
+// Css code
 <?php
     endif;
 
