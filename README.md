@@ -407,3 +407,11 @@ add_action("after_setup_theme", "alpha_bootstraping");
 ```
 
 
+# 25. Custom Post
+
+```php
+
+$placeholder_text = get_post_meta(get_the_ID(), "placeholder",true);
+
+```
+
