@@ -413,5 +413,8 @@ add_action("after_setup_theme", "alpha_bootstraping");
 
 $placeholder_text = get_post_meta(get_the_ID(), "placeholder",true);
 
+// Use the Variable
+<input type="text" class="form-control" placeholder="<?php echo esc_attr($placeholder_text);?>">
+
 ```
 
