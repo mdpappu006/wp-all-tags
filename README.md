@@ -449,3 +449,25 @@ die();
 
 ```
 
+
+# 28. Multiple Blog
+
+```php
+
+<!-- nextpage -->
+
+```
+
+
+# 29. post format 
+
+```php
+
+    function bootstrapping(){
+        add_theme_support( 'post-format', array("audio", "video", "quote") );
+    }
+    add_action("after_setup_theme", "bootstrapping");
+    
+
+```
+
