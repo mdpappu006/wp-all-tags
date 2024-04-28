@@ -440,7 +440,7 @@ $hint = get_post_meta(get_the_ID(), "hint",true);
 ```
 
 
-# 26. Find the Current Directory
+# 27. Find the Current Directory
 
 ```php
 
