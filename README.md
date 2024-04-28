@@ -412,9 +412,40 @@ add_action("after_setup_theme", "alpha_bootstraping");
 ```php
 
 $placeholder_text = get_post_meta(get_the_ID(), "placeholder",true);
+$hint = get_post_meta(get_the_ID(), "hint",true);
 
 // Use the Variable
 <input type="text" class="form-control" placeholder="<?php echo esc_attr($placeholder_text);?>">
+
+// Html Escape
+<p class="tip"><?php echo esc_html($hint);?></p>
+
+```
+
+
+
+# 26. On Javascript send the data
+
+```php
+
+$placeholder_text = get_post_meta(get_the_ID(), "placeholder",true);
+$hint = get_post_meta(get_the_ID(), "hint",true);
+
+// Use the Variable
+<input type="text" class="form-control" placeholder="<?php echo esc_attr($placeholder_text);?>">
+
+// Html Escape
+<p class="tip"><?php echo esc_html($hint);?></p>
+
+```
+
+
+# 26. Find the Current Directory
+
+```php
+
+echo basename(get_page_template());
+die();
 
 ```
 
