@@ -498,3 +498,13 @@ add_action("wp_enqueue_scripts","alpha_style");
 
 ```
 
+# 31. Single Page Author Section 
+
+```php
+
+get_avatar(get_the_author_meta("id"));
+
+
+```
+
+
