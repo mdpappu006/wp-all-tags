@@ -456,6 +456,10 @@ die();
 
 <!-- nextpage -->
 
+// Show the Pagination
+
+<?php wp_link_pages();?>
+
 ```
 
 
@@ -464,7 +468,7 @@ die();
 ```php
 
     function bootstrapping(){
-        add_theme_support( 'post-format', array("audio", "video", "quote") );
+        add_theme_support( 'post-formats', array("audio", "video", "quote", "image") );
     }
     add_action("after_setup_theme", "bootstrapping");
     
