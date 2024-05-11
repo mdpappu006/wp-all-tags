@@ -475,3 +475,26 @@ die();
 
 ```
 
+
+# 30. Dashicons enqueue
+
+```php
+
+function alpha_style(){
+    wp_enqueue_style("dashicons");
+}
+add_action("wp_enqueue_scripts","alpha_style");
+
+
+// Show the Icon 
+
+<?php
+    $alpha_format = get_post_format();
+    if($alpha_format == "video"){
+        <span class="dashicons dashicons-video-alt"></span>
+    }
+?>
+
+
+```
+
