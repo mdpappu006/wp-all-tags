@@ -507,4 +507,13 @@ get_avatar(get_the_author_meta("id"));
 
 ```
 
+# 32. Author Anchor Link 
+
+```php
+
+the_author_posts_link();
+
+
+```
+
 
