@@ -517,3 +517,17 @@ the_author_posts_link();
 ```
 
 
+# 33. Child Theme Load
+
+```php
+
+function alphachild(){
+    wp_enqueue_style("alpha-style",get_parent_theme_file_uri("/style.css"));
+}
+
+add_action("wp_enqueue_scripts","alphachild");
+
+
+```
+
+
