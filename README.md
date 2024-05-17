@@ -530,4 +530,23 @@ add_action("wp_enqueue_scripts","alphachild");
 
 ```
 
+# 34. Child Theme Function overright
+
+```php
+
+if(!function_exists("test_function")){
+   
+
+    function test_function(){
+
+    }
+
+    add_action("wp_head", "test_function");
+
+    
+}
+
+
+```
+
 
