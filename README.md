@@ -548,5 +548,29 @@ if(!function_exists("test_function")){
 
 
 ```
+# 35. কাস্টম কোয়েরীতে WP_Query ক্লাসের ব্যবহার
+
+```php
+
+$paged = get_query_var("paged") ? get_query_var("paged") : 1;
+$post_ids = array(54);
+$_p = new WP_QUERY(
+    array(
+        'post__in' =>$post_ids,
+        'order' => 'post__in',
+        'paged'=> $paged
+    )
+);
+```
 
 
+```php
+while($_p->have_posts()):
+    $_p->the_post();
+
+    <h2><a href="<?php the_permalink()?>"><?php the_title();?></a></h2>
+
+endwhile;
+wp_reset_query();
+
+```
