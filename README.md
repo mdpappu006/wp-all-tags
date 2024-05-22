@@ -574,3 +574,14 @@ endwhile;
 wp_reset_query();
 
 ```
+
+# 36. এসিএফ মেটাফিল্ডের ডেটা ডিসপ্লে করা
+
+```php
+
+if(get_post_format() == "image" && function_exists("the_field")):
+
+
+ Camera Model: <?php the_field("camera_model");?>
+
+```
