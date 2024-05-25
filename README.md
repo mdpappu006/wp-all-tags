@@ -19,6 +19,13 @@ bloginfo("title");
 
 ```php
 
+    if(site_url() == "https://nhptheme.com/philosophi"){
+        define("VERSION", time());
+    }else{
+        define("VERSION", wp_get_theme()->get("Version"));
+    }
+
+
     function bootstrapping(){
         load_theme_textdomain("alpha");
         add_theme_support( 'post-thumbnails' );
@@ -30,7 +37,7 @@ bloginfo("title");
     function alpha_assets(){
         wp_enqueue_style("alpha", get_stylesheet_uri());
         wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
-
+        wp_enqueue_style("fontawesome", get_theme_file_uri("/assets/css/font-awesome/font-awesome.css"),null, VERSION);
 
 
         // Extarnal Jquery file load library
@@ -38,7 +45,7 @@ bloginfo("title");
         wp_enqueue_script("featherlight-js", "//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js", array('jquery'),'0.0.1', true);
 
         // internal Jquery file load
-        wp_enqueue_script("main-js", get_template_directory_uri()."/assets/js/main.js", array('jquery'),'0.0.1', true);
+        wp_enqueue_script("main-js", get_theme_file_uri("/assets/js/main.js"), array('jquery'),'0.0.1', true);
 
     }
     
@@ -583,5 +590,26 @@ if(get_post_format() == "image" && function_exists("the_field")):
 
 
  Camera Model: <?php the_field("camera_model");?>
+
+```
+# 37. এসিএফ ইমেজ ফিল্ড ডিসপ্লে করা
+
+```php
+
+$alpha_img= get_field("image");
+$alpha_img_details = wp_get_attachment_image_src($alpha_img, "alpha-square");
+
+echo "<img src='".esc_url($alpha_img_details[0])."'/>";
+
+```
+
+# 38. এসিএফের ফাইল আপলোড ফিল্ড
+
+```php
+
+$alpha_img= get_field("image");
+$alpha_img_details = wp_get_attachment_image_src($alpha_img, "alpha-square");
+
+echo "<img src='".esc_url($alpha_img_details[0])."'/>";
 
 ```
