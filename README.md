@@ -613,3 +613,13 @@ $alpha_img_details = wp_get_attachment_image_src($alpha_img, "alpha-square");
 echo "<img src='".esc_url($alpha_img_details[0])."'/>";
 
 ```
+
+
+# 39. প্লাগিন ইনক্লুড করা 
+
+```php
+
+require_once get_theme_file_path('lib/class-tgm-plugin-activation.php');
+
+```
+
